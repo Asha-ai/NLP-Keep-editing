@@ -1,0 +1,110 @@
+### Text Mining
+Text mining /text analysis, is the process of transforming unstructured text into structured data for easy analysis. 
+Text mining uses natural language processing (NLP),allowing machines to understand the human language and process it automatically.
+
+### Slite difference between text mining and text analytics
+Text mining identifies relevant information within a text and therefore, provides qualitative results. 
+Text mining combines notions of statistics, linguistics, and machine learning to create models that learn from training data and can predict results on new 
+information based on their previous experience. 
+
+
+Text analytics, however, focuses on finding patterns and trends across large sets of data, resulting in more quantitative results. Text analytics is usually used to create graphs, 
+tables and other sorts of visual reports.
+Text analytics, on the other hand, uses results from analyses performed by text mining models, to create graphs and all kinds of data visualizations. 
+
+## Methods and Techniques
+#### Word frequency - Word frequency can be used to identify the most recurrent terms or concepts in a set of data. 
+#### Collocation - Collocation refers to a sequence of words that commonly appear near each other. The most common types of collocations are bigrams 
+(a pair of words that are likely to go together
+#### Concordance - Concordance is used to recognize the particular context or instance in which a word or set of words appears.
+### Advanced Methods
+### Text Extraction
+Text extraction is a text analysis technique that extracts specific pieces of data from a text, like keywords, entity names, addresses, 
+emails, etc. By using text extraction, companies can avoid all the hassle of sorting through their data manually to pull out key information.
+Most times, it can be useful to combine text extraction with text classification in the same analysis.
+Below, we’ll refer to some of the main tasks of text extraction – keyword extraction, named entity recognition and feature extraction.
+
+#### Keyword Extraction
+keywords are the most relevant terms within a text and can be used to summarize its content. Utilizing a keyword extractor allows you to index data to be searched, summarize the content of
+a text or create tag clouds, among other things.
+#### Named Entity Recognition
+allows you to identify and extract the names of companies, organizations or persons from a text. 
+#### Feature Extraction: helps identify specific characteristics of a product or service in a set of data. For example, if you are analyzing 
+product descriptions, you could easily extract features like color, brand, model, etc.
+
+### Text Classification
+Text classification is the process of assigning categories (tags) to unstructured text data. This essential task of Natural Language Processing (NLP) 
+makes it easy to organize and structure complex text, turning it into meaningful data.
+Major Tasks of Text Classification are
+#### Topic Analysis
+helps you understand the main themes or subjects of a text, and is one of the main ways of organizing text data. For example, a support ticket saying my online order
+hasn’t arrived, can be classified as Shipping Issues.
+#### Sentiment Analysis
+consists of analyzing the emotions that underlie any given text. Suppose you are analyzing a series of reviews about your
+mobile app. You may find out that the most frequently mentioned topics in those reviews are UI-UX or Ease of Use, but that’s not enough
+information to arrive to any conclusions. Sentiment analysis helps you understand the opinion and feelings in a text, and classify them as positive, 
+negative or neutral. Sentiment analysis has a lot of useful applications in business, from analyzing social media posts to going through reviews or
+support tickets. In terms of customer support, for instance, you might be able to quickly identify angry customers and prioritize their problems first.
+
+#### Language Detection
+allows you to classify a text based on its language. One of its most useful applications is automatically routing support tickets to the right 
+geographically located team. Automating this task is quite simple and helps teams save valuable time.
+
+#### Intent Detection: you could use a text classifier to recognize the intentions or the purpose behind a text automatically. This can be particularly 
+useful when analyzing customer conversations. For example, you could sift through different outbound sales email responses and identify the prospects which 
+are interested in your product from the ones that are not, or the ones who want to unsubscribe. 
+
+### Why is Text Mining Important?
+real time data is unstructured, it’s almost impossible to manage. In other words, it’s just not useful.
+
+In a business context, unstructured text data can include emails, social media posts, chats, support tickets, surveys, etc.
+Sorting through all these types of information manually often results in failure. Not only because it’s time-consuming and expensive, 
+but also because it’s inaccurate and impossible to scale.
+
+Text mining, however, has proved to be a reliable and cost-effective way to achieve accuracy, scalability and quick response times.
+Here are some of its main advantages in more detail:
+##### Scalability
+with text mining it’s possible to analyze large volumes of data in just seconds. By automating specific tasks, companies can save a lot of time that 
+can be used to focus on other tasks. This results in more productive businesses.
+
+##### Real-time analysis
+thanks to text mining, companies can prioritize urgent matters accordingly including, detecting a potential crisis, and discovering product flaws or negative
+reviews in real time. Why is this so important? Because it allows companies to take quick action.
+
+##### Consistent Criteria
+when working on repetitive, manual tasks people are more likely to make mistakes. They also find it hard to maintain consistency and analyze data subjectively
+. Let’s take tagging, for example. For most teams, adding categories to emails or support tickets is a time-consuming task that often leads to errors
+and inconsistencies. Automating this task not only saves precious time but also allows more accurate results and assures that a uniform criteria is 
+applied to every ticket.
+
+### How Does Text Mining Work?
+Text mining helps to analyze large amounts of raw data and find relevant insights. Combined with machine learning, it can create text analysis models that learn to classify or extract specific information based on previous training.
+
+Even though text mining may seem like a complicated matter, it can actually be quite simple to get started with. 
+The first step to get up and running with text mining is gathering your data. 
+The second step is preparing your data. Text mining systems use several NLP techniques ― like tokenization, parsing, lemmatization, stemming and 
+stop removal ― to build the inputs of your machine learning model.
+Then, it’s time for the text analysis itself. In this section, we’ll explain how the two most common methods for text mining actually work: 
+text classification and text extraction.
+
+### Text Classification
+Text classification is the process of assigning tags or categories to texts, based on their content.
+
+Thanks to automated text classification it is possible to tag a large set of text data and obtain good results in a very short time,
+without needing to go through all the hassle of doing it manually. This has exciting applications in different areas. 
+
+### Rule-based Systems
+These type of text classification systems are based on linguistic rules. By rules, we mean human-crafted associations between a specific linguistic pattern and a tag. Once the algorithm is coded with those rules, it can automatically detect the different linguistic structures and assign the corresponding tags.
+
+Rules generally consist of references to syntactic, morphological and lexical patterns. They can also be related to semantic or phonological aspects.
+
+For example, this could be a rule for classifying product descriptions based on the color of a product:
+
+(Black | Gray | White | Blue) → Color
+
+### Machine Learning-based Systems
+Text classification systems based on machine learning can learn from previous data (examples). To do that, they need to be trained with relevant
+examples of text — known as training data — that have been correctly tagged.
+
+The training samples have to be consistent and representative, so that the model can make accurate predictions. But how does a text classifier actually work? 
+
