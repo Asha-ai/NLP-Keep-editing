@@ -108,3 +108,4 @@ examples of text — known as training data — that have been correctly tagged.
 
 The training samples have to be consistent and representative, so that the model can make accurate predictions. But how does a text classifier actually work? 
 
+![textclassification](https://user-images.githubusercontent.com/66937023/107637745-a38fc500-6c94-11eb-980f-20dc63e649d8.PNG)
