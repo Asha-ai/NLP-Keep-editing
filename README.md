@@ -1,2 +1,4 @@
 # NLP-Keep-editing
-Kepp editing NLP resources
+Keep editing NLP resources ...
+## what is NLP
+ (NLP) is a branch of ML that deals with processing, analyzing, and sometimes generating human speech 
