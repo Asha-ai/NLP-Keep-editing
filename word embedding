@@ -1,0 +1,67 @@
+Word embedding is a language modelling technique to represent the words or phrases as vectors of real numbers. The words are grouped together to get similar representation
+for words with similar meaning. The word embedding learns the relationship between the words to construct the representation. This is achieved by the various methods like
+co-occurrence matrix, probabilistic modelling, neural networks. It has become one of the basic knowledge in natural language processing.
+
+One-hot vectors is one of the simple representations of the words. Each word can be represented by one hot vector but as the number of words increases the dimensionality
+increases
+
+Word2Vec , GloVe are popular word embeddings. BERT is one of the latest word embedding.
+
+Word embeddings are categorized into 2 types
+Frequency based embeddings — Count vector, Co-occurrence vector, HashingVectorizer, TF-IDF
+Pre-trained word embeddings — Word2Vec, GloVe, BERT, fastText
+
+* Frequency Bases Embeddings
+Frequency based embeddings vectorize the text depending on the frequency of occurrence of the words in the text/ document.
+One example of usage of the frequency bases embedding can be use of this in the text classification.
+
+* CountVectorizer
+CountVectorizer is a very simple vectorizer which gets the frequency of the words in the text. CountVectorizer is used convert the 
+collection of text documents to the word/token counts.
+
+* Co-occurrence Vectorizer or N gram
+The default parameter for the ngram_range is (1,1) that is taking the frequency of 1 word at a time from the document. 
+The ngram range gives the lower and upper boundary of words. This is required because some of the words if taken individually does not give 
+the complete meaning. For example take the text “good book”, “nice read”, “one cent”, “quite cheap”. In these examples the set of the words “nice read”
+gives complete meaning than the individual words.
+
+* HashingVectorizer
+HasingVectorizer is similar to CountVectorizer but it does not store the vocabulary for the document. It uses hashing to
+find the token string name to feature index mapping.
+
+Hashing vectorizer converts the documents to sparse matrix containing the frequencies of occurrences of tokens. This is normalized as token frequencies depending on the norm parameter. It can be either l1 norm or l2 norm.
+HashingVectorizer has several advantages.
+· The memory consumption is reduced as the vocabulary dictionary need not be stored.
+· It is fast to pickle and un-pickle as it does not hold any state.
+· It can be used for streaming or parallel pipeline data as there is no state used.
+
+There are some disadvantages of this
+· There is no possibility to retrieve the string names as they are not stored.
+· There can be feature collusions if the number of features is less.
+· There is no IDF weighting as it would render this stateful.
+
+When you have a large dataset, it is better to use the HashingVectorizer as it reduces the memory consumption and speeds up the algorithm. If the dataset is small,
+then it is better to use CountVectorizer as it is simple.
+
+TF-IDF Vectorizer
+The simple frequency based vectorizers sometimes may not serve the purpose as it only gives the frequency of the words. The TF-IDF Vectorizer tries to resolve this issue. TF-IDF is an acronym for “Term Frequency — Inverse Document Frequency”.
+TF — Term Frequency: This is the number of times the word appears in the document
+TF = ( Number of times a word appears in a document ) / ( Number of words in the document)
+IDF- Inverse Document Frequency: This downscales the word which appear frequently across the documents.
+IDF = log_e(Number of documents/ Number of documents in which the term appears)
+
+Basically TF-IDF increases the value of the words or token which are important for the document.
+TF-IDF is used by search engines to rank the documents relevant to the query done.
+
+Basically TF-IDF increases the value of the words or token which are important for the document.
+TF-IDF is used by search engines to rank the documents relevant to the query done.
+Spam message classification
+
+Using CountVectorizer as Word Embedddings
+Fit the word embeddings with CountVectorizer, Use Label Encoder from Sci-kit learn to encode the labels
+
+* Using Hashing Vectorizer as Word Embedding
+Fit the vectors with Hashing Vectorizer, Usage of the label Encoder and the creation of the model remain the same.
+
+
+
