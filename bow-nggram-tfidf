@@ -2,3 +2,105 @@
 BOW is way of representing text data when modeling text with ML algs.
 Good to use for language modeling and document classification, feature extraction.
 BOW is representation of text
+## BAG OF WORDS(BoW):
+The BoW model captures the frequencies of the word occurrences in a text corpus.
+
+Bag of words is not concerned about the order in which words appear in the text; instead, it only cares about which words appear in the text.
+
+Let’s understand how BoW works with an example. Consider the following phrases:
+
+Document 1: Cats and dogs are not allowed
+
+Document 2: Cats and dogs are antagonistic
+
+Bag of words will first create a unique list of all the words based on the two documents. If we consider the two documents, we will have seven unique words.
+
+‘cats’, ‘and’, ‘dogs’, ‘are’, ‘not’, ‘allowed’, ‘antagonistic’
+
+Each unique word is a feature or dimension.
+
+Now for each document, a feature vector will be created. Each feature vector will be seven-dimensional since we have seven unique words.
+
+Document1 vector: [1 1 1 1 1 1 0]
+
+Document2 vector: [1 1 1 1 0 0 1]
+
+The words present in the document are marked as 1 and the remaining as 0.
+
+# N-Grams:
+N gram capture the context in which words are used togeather.For example consider bigrams like "New Yark" insted of breaking it into individual words like "New" and "Yark"
+
+An N-gram is a sequence of N-words in a sentence . Here, N is an integer which stands for number of words in the sequence.
+
+For example, if we put N=1, then it is referred to as a uni-gram. If you put N=2, then it is a bi-gram. If we substitute N=3, then it is a tri-gram.
+
+The bag of words does not take into consideration the order of the words in which they appear in a document, and only individual words are counted.
+
+In some cases, the order of the words might be important.
+N-grams captures the context in which the words are used together. For example, it might be a good idea to consider bigrams like “New York” instead of breaking it into individual words like “New” and “York”
+
+Consider the sentence “I like dancing in the rain”
+
+See the Uni-Gram, Bi-Gram, and Tri-Gram cases below.
+
+UNIGRAM: ‘I’, ‘like’, ‘dancing’, ‘in’, ‘the’, ‘rain’
+
+BIGRAM: ‘I like’, ‘like dancing’, ‘dancing in’, ‘in the’, ‘the rain’
+
+TRIGRAM: ‘I like dancing’, ‘like dancing in’, ‘dancing in the’, ‘in the rain’
+
+# Term Frequency, Inverse Document Frequency(TF-IDF):
+This is the most popular way to represent documents as feature vectors.TF_IDF stands for Term Frequency Inverse document frequency.
+This is the most popular way to represent documents as feature vectors. TF-IDF stands for Term Frequency, Inverse Document Frequency.
+
+TF-IDF measures how important a particular word is with respect to a document and the entire corpus.
+
+Term Frequency:
+
+Term frequency is the measure of the counts of each word in a document out of all the words in the same document. 
+
+TF(w) = (number of times word w appears in a document) / (total number of words in the document)
+
+For example, if we want to find the TF of the word cat which occurs 50 times in a document of 1000 words, then 
+
+TF(cat) = 50 / 1000 = 0.05
+
+Inverse Document Frequency:
+
+IDF is a measure of the importance of a word, taking into consideration the frequency of the word throughout the corpus.
+
+It measures how important a word is for the corpus.
+
+IDF(w) = log(total number of documents / number of documents with w in it)
+
+For example, if the word cat occurs in 100 documents out of 3000, then the IDF is calculated as
+
+IDF(cat) = log(3000 / 100) = 1.47
+
+Finally, to calculate TF-IDF, we multiply these two factors – TF and IDF.
+
+TF-IDF(w) = TF(w) x IDF(w)
+
+TF-IDF(cat) = 0.05 * 1.47 = 0.073
+
+Let’s do some coding.
+
+We’ll use the TfidfVectorizer from scikit-learn for vectorizing the documents.
+
+# SUMMARY:
+We first discussed bag of words which is a simple method to convert raw text to numerical vectors. BoW model captures the frequencies of the word occurrences in a text corpus.
+
+However, the drawback with this model is that it is very sparse, and it does not take into consideration the order of words in which they appear in the document.
+
+We then discussed N-grams, which is a sequence of N-words in a document. N-gram tends to capture the context in which the words are used together.
+
+The problem with N-gram is that even here, the resulting matrix is extremely sparse.
+
+Finally, we discussed TF-IDF which measures how important a particular word is with respect to a document and the entire corpus. Words which are rare in a document will have a high score in the TF-IDF vector.
+
+
+
+
+
+
+
