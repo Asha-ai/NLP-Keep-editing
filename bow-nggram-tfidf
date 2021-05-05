@@ -1,0 +1,4 @@
+# converting raw text to numerical vectors using BOW, N_grams, Tf-Idf.
+BOW is way of representing text data when modeling text with ML algs.
+Good to use for language modeling and document classification, feature extraction.
+BOW is representation of text
