@@ -27,6 +27,25 @@ Document2 vector: [1 1 1 1 0 0 1]
 
 The words present in the document are marked as 1 and the remaining as 0.
 
+## Problems with TF-IDF and Bag of Words Approach
+Before we go and actually implement the N-Grams model, let us first discuss the drawback of the bag of words and TF-IDF approaches.
+
+In the bag of words and TF-IDF approach, words are treated individually and every single word is converted into its numeric counterpart. The context information of the word is not retained. Consider two sentences "big red machine and carpet" and "big red carpet and machine". If you use a bag of words approach, you will get the same vectors for these two sentences. However, we can clearly see that in the first sentence we are talking about a "big red machine", while the second sentence contains information about the "big red carpet". Hence, context information is very important. The N-Grams model basically helps us capture the context information.
+
+Theory of N-Grams Model
+Wikipedia defines an N-Gram as "A contiguous sequence of N items from a given sample of text or speech". Here an item can be a character, a word or a sentence and N can be any integer. When N is 2, we call the sequence a bigram. Similarly, a sequence of 3 items is called a trigram, and so on.
+
+In order to understand N-Grams model, we first have to understand how the Markov chains work.
+
+Connection of N-Grams with Markov Chains
+A Markov chain is a sequence of states. Consider a Markov system with 2 states, X and Y. In a Markov chain, you can either stay at one state or move to the other state. In our example, our states have the following behavior:
+
+The probability of moving from X to Y is 50% and similarly, the probability of staying at X is 50%.
+Likewise, the probability of staying at Y is 50% while the possibility of moving back to X is also 50%.
+This way a Markov sequence can be generated, such as XXYX, etc.
+
+In an N-Grams model, an item in a sequence can be treated as a Markov state. Let's see a simple example of character bigrams where each character is a Markov state.
+
 # N-Grams:
 N gram capture the context in which words are used togeather.For example consider bigrams like "New Yark" insted of breaking it into individual words like "New" and "Yark"
 
